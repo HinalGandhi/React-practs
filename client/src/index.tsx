@@ -6,7 +6,7 @@ import Feature from "./components/features";
 import About from "./components/about";
 import Contact from "./components/contact";
 import Intro from "./components/intro";
-import  Page from "./components/404page";
+import Page from "./components/404page";
 
 ReactDOM.render(
   <React.StrictMode>
