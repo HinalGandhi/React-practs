@@ -21,5 +21,5 @@ ReactDOM.render(
       </Routes>
     </Router>
   </React.StrictMode>,
-  document.getElementById("content")
+  document.getElementById("root")
 );
