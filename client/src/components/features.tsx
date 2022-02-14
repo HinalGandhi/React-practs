@@ -1,5 +1,7 @@
 import * as React from "react";
 import App from "./App";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 const date = new Date();
 const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -7,7 +9,7 @@ const data =[
     "Buy new sweatshirt",
     "Begin promotional phase",
    "Read an article",
-    "TRy not to fall asleep",
+    "Try not to fall asleep",
     "Watch 'Sherlock'",
     "Begin QA for the product",
     "Go for a walk"
@@ -31,7 +33,7 @@ function Feature(): JSX.Element {
           </div>
           <ul>
                 {data.map(function(name, index){
-                    return <li className="d-flex" key={ index }><p>{name}</p><i className="fa-dot-circle-o"></i></li>;
+                    return <li className="d-flex" key={ index }><p>{name} <FontAwesomeIcon icon={faCheckCircle} style={{color:"green"}} /></p></li>;
                   })}
             </ul>
         </div>
