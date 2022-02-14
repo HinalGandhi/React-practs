@@ -14,7 +14,7 @@ function App(): JSX.Element {
             <Nav.Link as={Link} to="/Home">Home</Nav.Link>
             {/* </LinkContainer> */}
             <LinkContainer to="/Feature">
-              <Nav.Link>Features</Nav.Link>
+              <Nav.Link>To-Do</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/About">
               <Nav.Link>About Us</Nav.Link>
