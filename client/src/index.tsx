@@ -7,6 +7,7 @@ import About from "./components/about";
 import Contact from "./components/contact";
 import Intro from "./components/intro";
 import Page from "./components/404page";
+import './App.css';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,7 +17,7 @@ ReactDOM.render(
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
-        <Route path="/Feature" element={<Feature />} />
+        <Route path="/To-Do" element={<Feature />} />
         <Route path="*" element={<Page />} />
       </Routes>
     </Router>

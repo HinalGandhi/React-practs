@@ -10,10 +10,8 @@ function App(): JSX.Element {
         <Container style={{ flexWrap: "wrap" }}>
           <Navbar.Brand href="/">Random Pic</Navbar.Brand>
           <Nav className="me-auto">
-            {/* <LinkContainer to="/Home"> */}
             <Nav.Link as={Link} to="/Home">Home</Nav.Link>
-            {/* </LinkContainer> */}
-            <LinkContainer to="/Feature">
+            <LinkContainer to="/To-Do">
               <Nav.Link>To-Do</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/About">
