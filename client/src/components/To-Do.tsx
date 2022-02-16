@@ -2,9 +2,10 @@ import * as React from "react";
 import App from "./App";
 import DateBar from "./DateBar";
 import TodoList from "./List";
+import Addactivity from "./Addactivity";
 
-class Feature extends React.Component{
-  render(){
+class Feature extends React.Component<any>{
+  render(): JSX.Element{
   return (
     <>
       <App />
@@ -17,8 +18,9 @@ class Feature extends React.Component{
                   <DateBar />
                   <div className="col">
                     <TodoList />
+                    <Addactivity/>
                     <div className="position-relative d-flex justify-content-center">
-                      <button className="position-absolute text-muted btn_Add ">
+                      <button className="position-absolute text-muted btn_Add " >
                         +
                       </button>
                     </div>
@@ -35,3 +37,7 @@ class Feature extends React.Component{
 }
 
 export default Feature;
+function setState(arg0: boolean) {
+  throw new Error("Function not implemented.");
+}
+
