@@ -34,3 +34,7 @@
   color: #25a725 !important;
   margin-top: 20px;
 }
+.list{
+  height:25.5rem;
+  overflow-y:auto;
+}
