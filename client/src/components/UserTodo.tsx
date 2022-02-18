@@ -13,12 +13,12 @@ function UserTodo(props: NewType): JSX.Element{
     function changeStatus() {
         setChecked(!check);
     }
-
+    
     return(
-        <>
-            <div className='usertodo'>
+        < >
+            <div className='d-flex align-items-center justify-content-between usertodo'>
                 <span className={check ? 'checked' : ''}>{props.task}</span>
-                <input className='checkbox'  defaultChecked={check ? true : false} type={'checkbox'} onClick={changeStatus}/>
+                <input className='checkbox' defaultChecked={check ? true : false} type={'checkbox'} onClick={changeStatus}/>
             </div>
         </>
     );

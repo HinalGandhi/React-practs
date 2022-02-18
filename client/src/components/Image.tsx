@@ -1,16 +1,20 @@
+import { loadOptions } from "@babel/core";
 import * as React from "react";
 
 export function Image(): JSX.Element {
     const [data, setPhotosResponse] = React.useState(null);
 
     React.useEffect(() => {
-        fetch("https://source.unsplash.com/featured?technology&h=200&w=200")
+        fetch("https://source.unsplash.com/random/300x300/?tech",{
+            mode: 'no-cors',
+        })
             .then((result): void => {
+                console.log(result);
                 setPhotosResponse(result);
             })
             .catch(() => {
                 console.log("something went wrong!");
-            });
+            })
     }, []);
 
     if (data === null) {

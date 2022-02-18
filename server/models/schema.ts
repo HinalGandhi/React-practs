@@ -1,19 +1,20 @@
 var mongoose = require("mongoose");
-var schema = new mongoose.Schema({
+
+const schema = new mongoose.Schema({
     task: {
         type: String,
-        required: true
+        required: true,
     },
     isComplete: {
         type: Boolean,
         required: false,
-        "default": false
+        default: false,
     },
     created_at: {
         type: Date,
         required: true,
-        "default": Date.now
+        default: Date.now
     }
 });
-var List = mongoose.model("LIST", schema);
+const List = mongoose.model("LIST", schema);
 module.exports = List;
