@@ -1,3 +1,3 @@
-# Practical - 2
+# Practical - 3
 ## Live Demo
-https://pract-2.netlify.app/
+https://pract-3.netlify.app/To-Do
