@@ -5,7 +5,7 @@ export function Image(): JSX.Element {
     const [data, setPhotosResponse] = React.useState(null);
 
     React.useEffect(() => {
-        fetch("https://source.unsplash.com/random/300x300/?tech",{
+        fetch("https://picsum.photos/200/300?grayscale",{
             mode: 'no-cors',
         })
             .then((result): void => {

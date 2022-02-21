@@ -13,22 +13,22 @@ class Feature extends React.Component<{}, any> {
     this.handleClick = this.handleClick.bind(this);
     this.escFunction = this.escFunction.bind(this);
   }
-  handleClick() {
+  handleClick(): void {
     this.setState((prevState: { isToggleOn: any }) => ({
       isToggleOn: !prevState.isToggleOn,
     }));
   }
-  escFunction(event: { key: string }) {
+  escFunction(event: { key: string }): void {
     if (event.key === "Escape") {
       this.setState(() => ({
         isToggleOn: true,
       }));
     }
   }
-  componentDidMount() {
+  componentDidMount(): void {
     document.addEventListener("keydown", this.escFunction, false);
   }
-
+  //To-do List
   render(): JSX.Element {
     return (
       <>

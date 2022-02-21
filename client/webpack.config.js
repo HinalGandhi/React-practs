@@ -11,20 +11,22 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "build"),
         filename: "js/[name].bundle.js",
+       
     },
     optimization: {
         runtimeChunk: "single",
     },
     devServer: {
-        historyApiFallback: true,
         open:true,
         port:3000,
-        proxy: {
-            '/': {
-                target: 'http://localhost:5000',
-                secure: false,
-              },
-        }
+        // proxy: {
+        //     '**': {
+        //         target: 'http://localhost:5000/',
+        //         changeOrigin: true,
+        //         secure: false,
+        //       },
+        // },
+        historyApiFallback: true
     },
     devtool: "source-map",
     resolve: {

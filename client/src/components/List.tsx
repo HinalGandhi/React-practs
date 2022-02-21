@@ -1,13 +1,14 @@
 import * as React from 'react';
 import UserTodo from './UserTodo';
 import axios from "axios"
-
+const baseUrl='http://localhost:5000';
 function TodoList(props: object): JSX.Element {
   const [error, setError] = React.useState(null);
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [items, setItems] = React.useState([]);
+  //getting tasks
   React.useEffect(() => {
-    axios.get('/getrecords')
+    axios.get(baseUrl+'/getrecords')
       .then(function (response) {
         // handle success
         setIsLoaded(true);
@@ -24,7 +25,7 @@ function TodoList(props: object): JSX.Element {
     };
 
   }, [])
-
+  //mapping them into a list
   return (
     <>
       {
