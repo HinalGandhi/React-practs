@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as React from "react";
-const baseUrl='https://simple-node-server-hinal.herokuapp.com/';
+const baseUrl='http://localhost:5000/';
 interface Todo {
   _id: string;
   key: number;

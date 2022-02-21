@@ -1,14 +1,14 @@
 import * as React from 'react';
 import UserTodo from './UserTodo';
 import axios from "axios"
-const baseUrl='https://simple-node-server-hinal.herokuapp.com/';
+const baseUrl='http://localhost:5000';
 function TodoList(props: object): JSX.Element {
   const [error, setError] = React.useState(null);
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [items, setItems] = React.useState([]);
   //getting tasks
   React.useEffect(() => {
-    axios.get(baseUrl+'getrecords')
+    axios.get(baseUrl+'/getrecords')
       .then(function (response) {
         // handle success
         setIsLoaded(true);
@@ -25,7 +25,7 @@ function TodoList(props: object): JSX.Element {
     };
 
   }, [])
-  //mapping them into a list
+  //mapping them into a
   return (
     <>
       {
