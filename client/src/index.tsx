@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/home";
-import Feature from "./components/To-Do";
-import About from "./components/about";
-import Contact from "./components/contact";
-import Intro from "./components/intro";
-import Page from "./components/404page";
+import Home from "./components/Home/home";
+import Feature from "./components/To-Do/To-Do";
+import About from "./components/About/about";
+import Contact from "./components/Contact/contact";
+import Intro from "./components/Intro/intro";
+import Page from "./components/404/404page";
 import './App.css';
 
 ReactDOM.render(

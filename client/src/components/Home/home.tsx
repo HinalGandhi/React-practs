@@ -1,14 +1,14 @@
 import * as React from "react";
-import App from "./App";
-function About(): JSX.Element {
+import App from "../App";
+function Home(): JSX.Element {
     return (
         <div>
             <App />
             <div className="container my-4 text-center">
-                <h2>About Us</h2>
-                <p>This ia a About page</p>
+                <h2>Home</h2>
+                <p>You have customer records</p>
             </div>
         </div>
     );
 }
-export default About;
+export default Home;
