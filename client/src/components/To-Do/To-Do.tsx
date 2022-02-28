@@ -1,5 +1,4 @@
 import * as React from "react";
-import App from "../App";
 import DateBar from "./DateBar";
 import TodoList from "./List";
 import Addactivity from "./Addactivity";
@@ -32,7 +31,6 @@ class Feature extends React.Component<{}, any> {
   render(): JSX.Element {
     return (
       <>
-        <App />
         <div className="main ">
           <div className="container pb-5 mt-5 ">
             <div className="row justify-content-center">
@@ -45,16 +43,16 @@ class Feature extends React.Component<{}, any> {
                     </div>
                     {this.state.isToggleOn ? <></> : <Addactivity />}
                     <div className="position-relative d-flex justify-content-center">
-                        <button
-                          className="position-absolute text-muted btn_Add "
-                          onClick={this.handleClick}
-                          style={{
-                            display: this.state.isToggleOn ? "block" : "none",
-                          }}
-                        >
-                          +
-                        </button>
-                      </div>
+                      <button
+                        className="position-absolute text-muted btn_Add "
+                        onClick={this.handleClick}
+                        style={{
+                          display: this.state.isToggleOn ? "block" : "none",
+                        }}
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

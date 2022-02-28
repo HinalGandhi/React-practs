@@ -1,5 +1,4 @@
 import * as React from "react";
-import App from "../App";
 import { Image } from "./Image";
 
 function Intro(): JSX.Element {
@@ -9,7 +8,6 @@ function Intro(): JSX.Element {
   }
   return (
     <div>
-      <App />
       <div className="container my-4 text-center">
         <h2>Random Pic</h2>
         <p>This is a random pic generator!</p>
