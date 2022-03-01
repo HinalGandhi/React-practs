@@ -9,13 +9,19 @@ import { useState } from "react";
 
 export function PostsList(): JSX.Element {
   const posts = useSelector((state: RootState) => state.posts);
+  const [user, setUser] = useState(null)
   const renderedPosts = posts.map((post, index): JSX.Element => {
     return (
-      <tr key={post.id} className="d-flex align-items-center"   >
+      <tr key={post.id} className="d-flex align-items-center">
         {index !== 0 &&
           (
             <>
-              <td className="d-flex userDetails">
+              <td className="d-flex userDetails" onMouseEnter={(user) => {
+                return setUser(post);
+              }}
+                onMouseLeave={(user) => {
+                  return setUser(null);
+                }}>
                 <picture>
                   <img
                     className="profileImg img-fluid img-thumbnail rounded-circle p-0"
@@ -95,9 +101,7 @@ export function PostsList(): JSX.Element {
         <Navbar />
         <tbody className="posts-list">{renderedPosts}</tbody>
       </table>
-      <UserProfileCard />
+      <UserProfileCard user={user} />
     </div>
   );
 }
-
-

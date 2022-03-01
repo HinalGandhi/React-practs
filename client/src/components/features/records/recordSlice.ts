@@ -32,14 +32,14 @@ const initialState = [
   {
     id: 5,
     email: "ullrich.owen@kristin.biz",
-    first_name: "Nitithron Prinya",
+    first_name: "Nitithron ",
     last_name: "Prinya",
     avatar: "https://reqres.in/img/faces/11-image.jpg",
   },
   {
     id: 6,
     email: "kale_lehner@yahoo.com",
-    first_name: "Nombeko Mabandia",
+    first_name: "Nombeko ",
     last_name: "Mabandia",
     avatar: "https://reqres.in/img/faces/12-image.jpg",
   },
