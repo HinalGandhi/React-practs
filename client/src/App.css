@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Roboto:wght@300;400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo 2', cursive;
+}
+.body{
+    margin: 0;
+}
+
+.main_div {
+  background-color: rgb(245, 247, 235) !important;
+}
+.box_style {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.label-date{
+    font-size: 3rem !important;
+}
+.big {
+  line-height: 0.9;
+}
+.btn_Add {
+  font-size: xx-large;
+  border: none;
+  outline: none;
+  padding: 5px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgb(2, 233, 125,0.8);
+  color: #25a725 !important;
+  margin-top: 20px;
+}
+.list{
+  height:26rem;
+  overflow-y:auto;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 4px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px  rgba(236, 236, 236, 0.8); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgb(35 241 70 / 78%); 
+}
