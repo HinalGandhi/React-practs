@@ -1,8 +1,8 @@
 import * as React from "react";
-import recordSlice from "../records/recordSlice";
 import "./UserProfileCard.css";
 
-function UserProfileCard(props: any): JSX.Element {
+function UserProfileCard(props: { user: { avatar: string; first_name: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; last_name: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; email: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; }; }): JSX.Element {
+  //{ console.log(props); }
   return (
     <>
       {props.user !== null && (
@@ -39,4 +39,4 @@ function UserProfileCard(props: any): JSX.Element {
   );
 }
 
-export default UserProfileCard;
+export default React.memo(UserProfileCard);
