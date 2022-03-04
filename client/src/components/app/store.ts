@@ -1,6 +1,6 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import postsReducer from '../features/records/recordSlice'
-import { api, useListPostsQuery } from '../services/recordApi';
+import { setupListeners } from '@reduxjs/toolkit/dist/query';
+import { api } from '../services/recordApi';
 
 export const store = configureStore({
   reducer: {
@@ -18,3 +18,4 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   Action<string>
 >;
+setupListeners(store.dispatch)

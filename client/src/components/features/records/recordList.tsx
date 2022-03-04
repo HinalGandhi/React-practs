@@ -2,30 +2,26 @@ import * as React from "react";
 import { useSelector } from "react-redux";
 import * as Icon from "react-feather";
 import "./records.css";
-import { RootState } from "../../app/store";
 import { Navbar } from "../../app/Navbar";
 import UserProfileCard from "../UserProfileCard/UserProfileCard";
 import { useState } from "react";
-import { useListPostsQuery } from "../../services/recordApi";
+import { api, useListPostsQuery } from "../../services/recordApi";
 import { Button } from "react-bootstrap";
 
 export function PostsList(): JSX.Element {
   const [page, setPage] = useState(1);
   const [user, setUser] = useState(null);
-  const { data: data, isLoading, isError } = useListPostsQuery(page);
-  console.log(data);
-  if (isError) {
-    return <div>An error has occurred!</div>
-  }
+  const { data: data, isLoading } = api.useListPostsQuery(page);
   if (isLoading) {
-    return <div>Loading....</div>
+    return < div > Loading....</div >
   }
+
   const renderedPosts = data.data.map((post, index): JSX.Element => {
     return (
       <tr key={post.id} className="d-flex align-items-center">
         <td
           className="d-flex userDetails"
-          onMouseEnter={React.useCallback(() => setUser(post), [setUser])}
+          onMouseEnter={() => setUser(post)}
           onMouseLeave={() => setUser(null)}
         >
           <picture>
@@ -69,20 +65,10 @@ export function PostsList(): JSX.Element {
             <Icon.Trash2 size={18} style={{ color: "rgba(0, 0, 0, 0.6)" }} />
           )}
         </td>
-        <>
-          <Button onClick={() => setPage(page - 1)} >
-            Previous
-          </Button>
-          <Button
-            onClick={() => setPage(page + 1)}
-          >
-            Next
-          </Button></>
       </tr>
 
     );
   })
-
   return (
     <div className="d-flex flex-wrap align-items-center container bg-white mt-5">
       <table
