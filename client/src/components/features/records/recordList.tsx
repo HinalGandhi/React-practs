@@ -1,21 +1,19 @@
 import * as React from "react";
-import { useSelector } from "react-redux";
 import * as Icon from "react-feather";
 import "./records.css";
 import { Navbar } from "../../app/Navbar";
 import UserProfileCard from "../UserProfileCard/UserProfileCard";
 import { useState } from "react";
-import { api, useListPostsQuery } from "../../services/recordApi";
-import { Button } from "react-bootstrap";
+import { useListPostsQuery } from "../../services/recordApi";
+import Pagination from "./pagination";
 
 export function PostsList(): JSX.Element {
   const [page, setPage] = useState(1);
   const [user, setUser] = useState(null);
-  const { data: data, isLoading } = api.useListPostsQuery(page);
+  const { data: data, isLoading } = useListPostsQuery(page);
   if (isLoading) {
-    return < div > Loading....</div >
+    return < div className="container" > Loading....</div >
   }
-
   const renderedPosts = data.data.map((post, index): JSX.Element => {
     return (
       <tr key={post.id} className="d-flex align-items-center">
@@ -71,14 +69,19 @@ export function PostsList(): JSX.Element {
   })
   return (
     <div className="d-flex flex-wrap align-items-center container bg-white mt-5">
-      <table
-        className="table table-borderless bg-white mr-4"
-        style={{ maxWidth: "50%" }}
-      >
-        <Navbar />
-        <tbody className="posts-list">{renderedPosts}</tbody>
-      </table>
+      <div className="d-flex-row">
+        <table
+          className="table table-borderless bg-white mr-4"
+          style={{ maxWidth: "50%" }}
+        >
+          <Navbar />
+          <tbody className="posts-list">{renderedPosts}</tbody>
+        </table>
+        {Pagination(setPage, page, data.total_pages)}
+      </div>
       {user && <UserProfileCard user={user} />}
     </div>
   );
 }
+
+
