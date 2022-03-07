@@ -14,7 +14,7 @@ export function PostsList(): JSX.Element {
   if (isLoading) {
     return < div className="container" > Loading....</div >
   }
-  const renderedPosts = data.data.map((post, index): JSX.Element => {
+  const renderedPosts = data.data.map((post): JSX.Element => {
     return (
       <tr key={post.id} className="d-flex align-items-center">
         <td
@@ -37,7 +37,7 @@ export function PostsList(): JSX.Element {
           </div>
         </td>
         <td className="text-success" style={{ width: "14rem" }}>
-          {index === 0 ? (
+          {post.id === 1 ? (
             "Active"
           ) : (
             <select className="selectMenu form-select">
@@ -47,7 +47,7 @@ export function PostsList(): JSX.Element {
           )}
         </td>
         <td className="" style={{ width: "10rem" }}>
-          {index === 0 ? (
+          {post.id === 1 ? (
             "Owner"
           ) : (
             <select className="selectMenu form-select">
@@ -57,7 +57,7 @@ export function PostsList(): JSX.Element {
           )}
         </td>
         <td>
-          {index === 0 ? (
+          {post.id === 1 ? (
             <Icon.Lock size={18} style={{ color: "rgba(0, 0, 0, 0.6)" }} />
           ) : (
             <Icon.Trash2 size={18} style={{ color: "rgba(0, 0, 0, 0.6)" }} />
