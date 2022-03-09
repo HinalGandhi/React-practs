@@ -4,7 +4,7 @@ export function Image(): JSX.Element {
     const [data, setPhotosResponse] = React.useState(null);
 
     React.useEffect(() => {
-        fetch("https://source.unsplash.com/featured?technology")
+        fetch("https://source.unsplash.com/featured?technology&h=200&w=200")
             .then((result): void => {
                 setPhotosResponse(result);
             })

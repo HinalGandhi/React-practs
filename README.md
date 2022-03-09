@@ -1,3 +1,3 @@
-# Practical - 2
-## Live Demo
-https://pract-2.netlify.app/
+# Practical - 6
+
+https://pract-6.netlify.app/Records
