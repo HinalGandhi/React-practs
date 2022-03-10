@@ -16,7 +16,7 @@ function App(): JSX.Element {
             <LinkContainer to="/To-Do">
               <Nav.Link>To-Do</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/About">
+            <LinkContainer to="/Deploy">
               <Nav.Link>Deploy Links</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/Contact">
