@@ -1,3 +1,3 @@
-# Practical - 6
+# Practical - 7
 
-https://pract-6.netlify.app/Records
+https://practical-7.netlify.app/
