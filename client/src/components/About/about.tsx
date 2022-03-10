@@ -50,8 +50,20 @@ function About(): JSX.Element {
 
                     </tr>
                     <tr>
-                        <th scope="row">3</th>
+                        <th scope="row">4</th>
                         <td>Firebase</td>
+                        <td><a
+                            href={"https://my-first-deploy-39ac2.web.app/"}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="font-normal text-xl mt-2 text-gray-200 hover:text-orange-400">
+                            Live Demo
+                        </a></td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Heroku</td>
                         <td><a
                             href={"https://my-first-deploy-39ac2.web.app/"}
                             target="_blank"
