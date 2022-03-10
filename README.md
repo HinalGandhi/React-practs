@@ -5,4 +5,4 @@ Understanding working of CI/CD.
 
 ## 🔗 Links
 
-[![azurewebsites](https://img.shields.io/badge/azurewebsite-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://deployment-az.azurewebsites.net/)
+[![azurewebsites](https://img.shields.io/badge/azurewebsite-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://deploy-az.azurewebsites.net/)
