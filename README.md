@@ -1,3 +1,3 @@
 # Practical - 7
 
-https://practical-7.netlify.app/
+https://practical-7.netlify.app/Deploy
