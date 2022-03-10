@@ -1,6 +1,7 @@
 # Deployment Practical-7
 
 Understanding Deployment on various platform such as Azure, firebase and AWS.
+Added env files for production and staging.
 Understanding working of CI/CD.
 
 ## 🔗 Links
