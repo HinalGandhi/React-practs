@@ -71,7 +71,6 @@ function About(): JSX.Element {
                             className="font-normal text-xl mt-2 text-gray-200 hover:text-orange-400">
                             Live Demo
                         </a></td>
-
                     </tr>
                 </tbody>
             </table>
