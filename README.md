@@ -7,7 +7,7 @@ Understanding working of CI/CD.
 ## Live Demo
 
 [![Demo](https://img.shields.io/badge/Practical-7-blue?style=for-the-badge&logo=U+1F517&logoColor=white)](https://practical-7.netlify.app/Deploy)
-[![Demo](https://img.shields.io/badge/Practical-azure-blue?style=for-the-badge&logo=U+1F517&logoColor=white)](https://demo-boiler.azurewebsites.net/Deploy)
+[![Demo](https://img.shields.io/badge/Practical-azure-blue?style=for-the-badge&logo=U+1F517&logoColor=white)](https://demo-boiler.azurewebsites.net/)
 
 ## 🔗 Links
 
